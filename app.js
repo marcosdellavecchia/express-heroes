@@ -33,17 +33,11 @@ app.get("/heroes/detalle/:id", (req, res) => {
   let id = req.params.id;
   for (let i = 0; i < heroes.length; i++) {
     if (id == heroes[i].id) {
-      res.send(
-        "Hola, mi nombre es " +
-          heroes[i].nombre +
-          " y soy " +
-          heroes[i].profesion +
-          "."
-      );
-    } else {
-      res.send("No encontramos el heroe que buscas!");
+      return res.send(`
+        Hola, mi nombre es ${heroes[i].nombre} y soy ${heroes[i].profesion}.`);
     }
   }
+  res.send("No encontramos el heroe que buscas :(");
 });
 
 // // Ruta /heroes/n/bio ➝ se envía la bio del héroe solicitado
