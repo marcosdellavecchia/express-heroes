@@ -47,15 +47,15 @@ Deberá mostrar todo el contenido del archivo heroes.json. En el navegador se de
 
 #### Héroes - Detalle (/heroes/detalle/id)
 
-Deberá mostrar un texto que diga: "Hola, mi nombre es NOMBRE y soy PROFESION". En donde el NOMBRE y PROFESION deberán ser reemplazados por al información real. Ejemplo: /heroes/2 mostrará la información de la Heroina o del Héroe con id 2 . Controlar el escenario en donde se pase un número n que no haga match con el id de un héroe.
+Deberá mostrar un t exto que diga: "Hola, mi nombre es NOMBRE y soy PROFESION". En donde el NOMBRE y PROFESION deberán ser reemplazados por al información real. Ejemplo: /heroes/2 mostrará la información de la Heroina o del Héroe con id 2 . Controlar el escenario en donde se pase un número n que no haga match con el id de un héroe.
 
 #### Héroes - Detalle con bio (/heroes/bio/id/ok)
 
 Aquí se desea mostrar la información así:
 
-Si no se encontró el héroe con ese id. El texto será: "No encontramos un héroe para mostrarte su biografía". Esto, indistintamente si se envió o no el parámetro "ok".
-Si se encontró el héroe con ese id y NO vino exactamente la palabra ok o simplemente NO vino nada en la ruta. Mostrar el nombre del héroe y un texto adicional que diga: "Lamento que no desees saber más de mi :(".
-Si se encontró el héroe con ese id y vino exactamente la palabra ok. Mostrar el nombre del héroe y su reseña.
+- Si no se encontró el héroe con ese id. El texto será: "No encontramos un héroe para mostrarte su biografía". Esto, indistintamente si se envió o no el parámetro "ok".
+- Si se encontró el héroe con ese id y NO vino exactamente la palabra ok o simplemente NO vino nada en la ruta. Mostrar el nombre del héroe y un texto adicional que diga: "Lamento que no desees saber más de mi :(".
+- Si se encontró el héroe con ese id y vino exactamente la palabra ok. Mostrar el nombre del héroe y su reseña.
 
 #### Créditos (/creditos)
 
