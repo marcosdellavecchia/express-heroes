@@ -45,13 +45,13 @@ app.get("/heroes/:id/bio/:ok?", (req, res) => {
   let id = req.params.id;
   let ok = req.params.ok;
   for (let i = 0; i < heroes.length; i++) {
-    // Si se encuentra al heroe pero el parametro OK no existe como tal (es diferente o no esta)
+    // Si encuentra al heroe pero el parametro OK no existe como tal (es diferente o no esta)
     if (id == heroes[i].id && (ok != "ok" || !ok)) {
       return res.send(
         `${heroes[i].nombre}: Lamento que no quieras saber nada de mi :(`
       );
     }
-    // Si se encuentra al heroe y el parametro OK esta ingresado (por descarte, si avanzo hasta esta instancia es porque req.params.ok == ok)
+    // Si encuentra al heroe y el parametro OK esta ingresado (por descarte, si avanzo hasta esta instancia es porque req.params.ok == 'ok')
     else if (id == heroes[i].id) {
       return res.send(`${heroes[i].nombre}: ${heroes[i].resenia}`);
     }
