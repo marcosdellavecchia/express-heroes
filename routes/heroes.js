@@ -15,7 +15,7 @@ router.get("/", (req, res) => {
 
 // Ruta /heroes/detalle/id ➝ se envía el nombre y profesión del héroe solicitado
 router.get("/detalle/:id", (req, res) => {
-  let id = req.params.id;
+  let { id } = req.params;
   for (let i = 0; i < heroes.length; i++) {
     if (id == heroes[i].id) {
       return res.send(`
@@ -27,8 +27,7 @@ router.get("/detalle/:id", (req, res) => {
 
 // Ruta /heroes/id/bio/ok ➝ se envía la bio del héroe solicitado
 router.get("/:id/bio/:ok?", (req, res) => {
-  let id = req.params.id;
-  let ok = req.params.ok;
+  let { id, ok } = req.params;
   for (let i = 0; i < heroes.length; i++) {
     // Si encuentra al heroe pero el parametro OK no existe como tal (es diferente o no esta)
     if (id == heroes[i].id && (ok != "ok" || !ok)) {
