@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const heroesController = require("../controllers/heroes");
+
 // Ruta /heroes ➝ se envía todo el array y Express lo parsea para el browser como JSON :D
 router.get("/", heroesController.all);
 

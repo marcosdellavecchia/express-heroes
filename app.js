@@ -1,7 +1,5 @@
-// Require de Express
+// Require y ejecución de Express
 const express = require("express");
-
-// Ejecución de Express
 const app = express();
 
 // Require de rutas
